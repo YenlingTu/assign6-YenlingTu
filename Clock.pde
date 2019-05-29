@@ -1,4 +1,22 @@
-class Clock {
+class Clock extends Item{
+ 
+  void display() {
+    if(isAlive){
+    image(clock,x,y);
+    }
+   }  
+  void checkCollision(Player player){
+    if(isAlive){
+      if(isHit( x , y , w , h , player.x , player.y , player.w , player.h ) ){
+    gameTimer += CLOCK_BONUS_SECONDS*60 ;
+    isAlive = false;
+      }
+    }
+  }
+   Clock( float x, float y ){
+    super(x , y);
+  }
+}
 	// Requirement #2: Complete Clock Class
 
 	/*
@@ -19,4 +37,3 @@ class Clock {
 
 		}
 	*/
-}
