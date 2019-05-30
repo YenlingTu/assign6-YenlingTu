@@ -153,7 +153,8 @@ void initGame(){
 break;
 			case 2: case 3: enemies[i] = new Dinosaur(newX, newY); // Requirement 4: Create new Dinosaur in row 9 - 16
 break;			
-case 4: case 5: ; // Requirement 5: Create new Robot in row 17 - 25
+                        case 4: case 5: new Robot(newX, newY) ; // Requirement 5: Create new Robot in row 17 - 25
+break;	
 		}
 
 
